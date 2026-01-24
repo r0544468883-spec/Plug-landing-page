@@ -15,6 +15,12 @@ const Hero: React.FC = () => {
       <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto magnetic-pull magnetic-pull-delay-2">
         {t('subheadline')}
       </p>
+      <p 
+        className="text-base sm:text-lg md:text-xl italic mt-6 magnetic-pull magnetic-pull-delay-3"
+        style={{ color: 'hsl(var(--plug-mint) / 0.8)' }}
+      >
+        {t('brandingSlogan')}
+      </p>
     </section>
   );
 };

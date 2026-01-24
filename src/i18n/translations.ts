@@ -9,6 +9,7 @@ export const translations = {
     headline: 'Job seeking is a full-time job.',
     headlineBold: 'PLUG is here to do it for you.',
     subheadline: 'The first AI-native interface for job seekers.',
+    brandingSlogan: 'Just plug in, and Plug will do the rest.',
     
     // Countdown
     countdownTitle: 'Launching In',
@@ -16,6 +17,33 @@ export const translations = {
     hours: 'Hours',
     minutes: 'Minutes',
     seconds: 'Seconds',
+    
+    // Pain Points Section
+    painPointsTitle: 'Sound Familiar?',
+    painBlackHoleTitle: 'The Black Hole',
+    painBlackHoleDesc: 'Automatically extracts details from any link (LinkedIn, company sites) and manages your personal CRM.',
+    painResumeTitle: 'Resume Matching',
+    painResumeDesc: 'Scans job requirements and recommends real-time changes to beat the ATS.',
+    painFollowUpTitle: 'Follow-up Chaos',
+    painFollowUpDesc: 'Email reminders, interview scheduling, and file management (homework & portfolio) in one place.',
+    
+    // Features Section
+    featuresTitle: 'The Solution',
+    featuresSubtitle: 'PLUG has your back with AI-powered tools designed for job seekers.',
+    featureQuickSearchTitle: 'Quick Search',
+    featureQuickSearchDesc: 'A list of companies with roles that match your resume exactly.',
+    featureQuickSearchExample: 'Found 14 companies matching you right now',
+    featureInterviewTitle: 'Interview Prep',
+    featureInterviewDesc: 'AI-powered interview simulator tailored to the specific role.',
+    featureCandidateIdTitle: 'Candidate ID',
+    featureCandidateIdDesc: 'Your personal landing page to share with recruiters.',
+    featureDirectContactTitle: 'Direct Contact',
+    featureDirectContactDesc: 'Connect directly with recruiters within the platform.',
+    featureAnalyticsTitle: 'Search Analytics',
+    featureAnalyticsDesc: 'Track your job search progress - know where you stand at any moment.',
+    
+    // FAB
+    fabButton: 'Save My Spot!',
     
     // Form
     formTitle: 'Be the First to Know',
@@ -62,6 +90,7 @@ export const translations = {
     headline: 'חיפוש עבודה הוא משרה מלאה.',
     headlineBold: 'פלאג כאן כדי לעשות אותה בשבילך.',
     subheadline: 'הממשק הראשון מבוסס AI למחפשי עבודה.',
+    brandingSlogan: 'פשוט תתחבר, ופלאג יעשה את השאר.',
     
     // Countdown
     countdownTitle: 'ההשקה בעוד',
@@ -69,6 +98,33 @@ export const translations = {
     hours: 'שעות',
     minutes: 'דקות',
     seconds: 'שניות',
+    
+    // Pain Points Section
+    painPointsTitle: 'נשמע מוכר?',
+    painBlackHoleTitle: 'החור השחור',
+    painBlackHoleDesc: 'שואבת אוטומטית פרטים מכל לינק (LinkedIn, אתר חברה) ומנהלת לך CRM אישי.',
+    painResumeTitle: 'התאמת קורות חיים',
+    painResumeDesc: 'סורקת את דרישות התפקיד וממליצה על שינויים בזמן אמת כדי לנצח את ה-ATS.',
+    painFollowUpTitle: 'כאוס המעקב',
+    painFollowUpDesc: 'תזכורות למיילים, ראיונות וניהול קבצים (מטלות בית ותיק עבודות) במקום אחד.',
+    
+    // Features Section
+    featuresTitle: 'הפתרון',
+    featuresSubtitle: 'פלאג גב לגב איתך עם כלים מבוססי AI שתוכננו למחפשי עבודה.',
+    featureQuickSearchTitle: 'חיפוש מהיר',
+    featureQuickSearchDesc: 'רשימת חברות עם תפקידים שמתאימים בדיוק לקורות החיים שלך.',
+    featureQuickSearchExample: 'מצאנו 14 חברות שמתאימות לך כרגע',
+    featureInterviewTitle: 'הכנה לראיון',
+    featureInterviewDesc: 'סימולטור הכנה לראיונות עבודה מבוסס AI מותאם לתפקיד הספציפי.',
+    featureCandidateIdTitle: 'כרטיס מועמד',
+    featureCandidateIdDesc: 'כרטיס אישי חכם לכל מועמד שניתן לשתף עם מגייסות.',
+    featureDirectContactTitle: 'קשר ישיר',
+    featureDirectContactDesc: 'יצירת קשר ישיר עם המגייסת בתוך המערכת.',
+    featureAnalyticsTitle: 'ניתוח חיפוש',
+    featureAnalyticsDesc: 'ניתוח מעקב חיפוש עבודה (Analytics) - דע איפה אתה עומד בכל רגע.',
+    
+    // FAB
+    fabButton: 'שמרי לי מקום!',
     
     // Form
     formTitle: 'היו הראשונים לדעת',

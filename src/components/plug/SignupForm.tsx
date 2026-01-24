@@ -14,9 +14,10 @@ const WEBHOOK_URL = 'https://your-n8n-instance.com/webhook/plug-waitlist';
 
 interface SignupFormProps {
   className?: string;
+  id?: string;
 }
 
-const SignupForm: React.FC<SignupFormProps> = ({ className }) => {
+const SignupForm: React.FC<SignupFormProps> = ({ className, id }) => {
   const { t, language } = useLanguage();
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [submittedName, setSubmittedName] = useState('');
@@ -108,7 +109,7 @@ const SignupForm: React.FC<SignupFormProps> = ({ className }) => {
   }
 
   return (
-    <section className={`w-full max-w-md mx-auto px-6 magnetic-pull magnetic-pull-delay-4 ${className || ''}`}>
+    <section id={id} className={`w-full max-w-md mx-auto px-6 magnetic-pull magnetic-pull-delay-4 ${className || ''}`}>
       <div className="glass-card p-6 sm:p-8">
         <div className="text-center mb-6">
           <h3 className="text-xl sm:text-2xl font-bold mb-2">{t('formTitle')}</h3>
