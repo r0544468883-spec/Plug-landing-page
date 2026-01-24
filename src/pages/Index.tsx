@@ -1,13 +1,30 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React from 'react';
+import { LanguageProvider } from '@/i18n/LanguageContext';
+import SpaceshipBackground from '@/components/plug/SpaceshipBackground';
+import Header from '@/components/plug/Header';
+import Hero from '@/components/plug/Hero';
+import Countdown from '@/components/plug/Countdown';
+import SignupForm from '@/components/plug/SignupForm';
+import Footer from '@/components/plug/Footer';
 
-const Index = () => {
+const Index: React.FC = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <LanguageProvider>
+      <div className="min-h-screen flex flex-col">
+        <SpaceshipBackground />
+        <Header />
+        
+        <main className="flex-1 flex flex-col items-center justify-center py-8">
+          <div className="w-full max-w-4xl mx-auto perspective-container">
+            <Hero />
+            <Countdown />
+            <SignupForm className="mt-8" />
+          </div>
+        </main>
+        
+        <Footer />
       </div>
-    </div>
+    </LanguageProvider>
   );
 };
 
