@@ -2,6 +2,7 @@ import React from 'react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Globe } from 'lucide-react';
+import plugLogo from '@/assets/plug-logo.png';
 
 const Header: React.FC = () => {
   const { language, setLanguage, t, isRTL } = useLanguage();
@@ -15,9 +16,11 @@ const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo - positioned based on reading direction */}
         <div className={`flex items-center ${isRTL ? 'order-2' : 'order-1'}`}>
-          <div className="text-2xl font-bold tracking-wider">
-            <span className="text-primary">PLUG</span>
-          </div>
+          <img 
+            src={plugLogo} 
+            alt="PLUG" 
+            className="h-8 sm:h-10 w-auto"
+          />
         </div>
 
         {/* Language Toggle */}

@@ -85,7 +85,7 @@ const Countdown: React.FC = () => {
         {t('countdownTitle')}
       </h3>
       
-      <div className="flex items-center justify-center gap-2 sm:gap-4">
+      <div className="flex flex-row items-center justify-center gap-2 sm:gap-4" dir="ltr">
         <TimeUnit value={timeLeft.days} label={t('days')} />
         <Separator />
         <TimeUnit value={timeLeft.hours} label={t('hours')} />
