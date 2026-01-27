@@ -1,5 +1,4 @@
 import React from 'react';
-import { LanguageProvider } from '@/i18n/LanguageContext';
 import SpaceshipBackground from '@/components/plug/SpaceshipBackground';
 import Header from '@/components/plug/Header';
 import Hero from '@/components/plug/Hero';
@@ -12,25 +11,23 @@ import Footer from '@/components/plug/Footer';
 
 const Index: React.FC = () => {
   return (
-    <LanguageProvider>
-      <div className="min-h-screen flex flex-col">
-        <SpaceshipBackground />
-        <Header />
-        
-        <main className="flex-1 flex flex-col items-center py-8">
-          <div className="w-full max-w-5xl mx-auto perspective-container">
-            <Hero />
-            <Countdown />
-            <PainPoints />
-            <FeatureGrid />
-            <SignupForm className="mt-8" id="signup-form" />
-          </div>
-        </main>
-        
-        <FloatingCTA />
-        <Footer />
-      </div>
-    </LanguageProvider>
+    <div className="min-h-screen flex flex-col">
+      <SpaceshipBackground />
+      <Header />
+      
+      <main className="flex-1 flex flex-col items-center py-8">
+        <div className="w-full max-w-5xl mx-auto perspective-container">
+          <Hero />
+          <Countdown />
+          <PainPoints />
+          <FeatureGrid />
+          <SignupForm className="mt-8" id="signup-form" />
+        </div>
+      </main>
+      
+      <FloatingCTA />
+      <Footer />
+    </div>
   );
 };
 
