@@ -102,29 +102,29 @@ export const translations = {
     // Pain Points Section
     painPointsTitle: 'נשמע מוכר?',
     painBlackHoleTitle: 'החור השחור',
-    painBlackHoleDesc: 'שואבת אוטומטית פרטים מכל לינק (LinkedIn, אתר חברה) ומנהלת לך CRM אישי.',
+    painBlackHoleDesc: 'פלאג שואב אוטומטית פרטים מכל לינק (LinkedIn, אתר חברה) ומנהל לך CRM אישי.',
     painResumeTitle: 'התאמת קורות חיים',
-    painResumeDesc: 'סורקת את דרישות התפקיד וממליצה על שינויים בזמן אמת כדי לנצח את ה-ATS.',
+    painResumeDesc: 'פלאג סורק את דרישות התפקיד וממליץ על שינויים בזמן אמת כדי לנצח את ה-ATS.',
     painFollowUpTitle: 'כאוס המעקב',
-    painFollowUpDesc: 'תזכורות למיילים, ראיונות וניהול קבצים (מטלות בית ותיק עבודות) במקום אחד.',
+    painFollowUpDesc: 'פלאג מזכיר לך לשלוח מיילים, מתזמן ראיונות ומנהל קבצים (מטלות בית ותיק עבודות) במקום אחד.',
     
     // Features Section
     featuresTitle: 'הפתרון',
-    featuresSubtitle: 'פלאג גב לגב איתך עם כלים מבוססי AI שתוכננו למחפשי עבודה.',
+    featuresSubtitle: 'פלאג איתך גב לגב עם כלים מבוססי AI שתוכננו למחפשי עבודה.',
     featureQuickSearchTitle: 'חיפוש מהיר',
     featureQuickSearchDesc: 'רשימת חברות עם תפקידים שמתאימים בדיוק לקורות החיים שלך.',
     featureQuickSearchExample: 'מצאנו 14 חברות שמתאימות לך כרגע',
     featureInterviewTitle: 'הכנה לראיון',
-    featureInterviewDesc: 'סימולטור הכנה לראיונות עבודה מבוסס AI מותאם לתפקיד הספציפי.',
+    featureInterviewDesc: 'פלאג מכין אותך לראיונות עבודה עם סימולטור AI מותאם לתפקיד הספציפי.',
     featureCandidateIdTitle: 'כרטיס מועמד',
-    featureCandidateIdDesc: 'כרטיס אישי חכם לכל מועמד שניתן לשתף עם מגייסות.',
+    featureCandidateIdDesc: 'פלאג יוצר לך כרטיס אישי חכם שניתן לשתף עם מגייסים.',
     featureDirectContactTitle: 'קשר ישיר',
-    featureDirectContactDesc: 'יצירת קשר ישיר עם המגייסת בתוך המערכת.',
+    featureDirectContactDesc: 'פלאג מאפשר לך ליצור קשר ישיר עם המגייס בתוך המערכת.',
     featureAnalyticsTitle: 'ניתוח חיפוש',
-    featureAnalyticsDesc: 'ניתוח מעקב חיפוש עבודה (Analytics) - דע איפה אתה עומד בכל רגע.',
+    featureAnalyticsDesc: 'פלאג מנתח את חיפוש העבודה שלך - תדע איפה אתה עומד בכל רגע.',
     
     // FAB
-    fabButton: 'שמרי לי מקום!',
+    fabButton: 'שמור לי מקום!',
     
     // Form
     formTitle: 'היו הראשונים לדעת',
