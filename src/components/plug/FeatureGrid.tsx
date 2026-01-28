@@ -35,37 +35,8 @@ const FeatureGrid: React.FC = () => {
   ];
 
   return (
-    <section className="relative py-12 px-6 overflow-hidden">
-      {/* Video Background - Desktop: left side */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute left-0 top-0 h-full w-1/2 lg:w-2/5 object-cover opacity-40 z-0 hidden sm:block pointer-events-none"
-        src="/videos/plug-features.mp4"
-      />
-      
-      {/* Video Background - Mobile: full background */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover opacity-20 z-0 sm:hidden pointer-events-none"
-        src="/videos/plug-features.mp4"
-      />
-      
-      {/* Dark overlay for readability */}
-      <div 
-        className="absolute inset-0 z-[1] pointer-events-none"
-        style={{
-          background: 'linear-gradient(to right, hsl(var(--background) / 0.6), hsl(var(--background) / 0.95))',
-        }}
-      />
-      
-      {/* Content - above video */}
-      <div className="relative z-10">
+    <section className="py-12 px-6">
+      <div>
         <h2 className="text-2xl sm:text-3xl font-bold text-center mb-4 text-foreground">
           {t('featuresTitle')}
         </h2>
