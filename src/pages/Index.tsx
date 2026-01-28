@@ -3,6 +3,7 @@ import SpaceshipBackground from '@/components/plug/SpaceshipBackground';
 import Header from '@/components/plug/Header';
 import Hero from '@/components/plug/Hero';
 import Countdown from '@/components/plug/Countdown';
+import FeaturesVideo from '@/components/plug/FeaturesVideo';
 import PainPoints from '@/components/plug/PainPoints';
 import FeatureGrid from '@/components/plug/FeatureGrid';
 import SignupForm from '@/components/plug/SignupForm';
@@ -19,6 +20,7 @@ const Index: React.FC = () => {
         <div className="w-full max-w-5xl mx-auto perspective-container">
           <Hero />
           <Countdown />
+          <FeaturesVideo />
           <PainPoints />
           <FeatureGrid />
           <SignupForm className="mt-8" id="signup-form" />
