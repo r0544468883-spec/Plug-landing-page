@@ -77,6 +77,8 @@ export const translations = {
     thankYouTitle: 'You\'re In!',
     thankYouMessage: 'Thanks for joining the waitlist.',
     thankYouSubtext: 'We\'ll notify you when we launch.',
+    orDivider: 'or',
+    whatsappGroupDesc: 'Get launch updates, feature guides, job seeking tips & recruiter insights',
     joinWhatsApp: 'Join our WhatsApp Group',
     
     // Footer
@@ -159,6 +161,8 @@ export const translations = {
     thankYouMessage: 'תודה שהצטרפתם לרשימת ההמתנה.',
     thankYouSubtext: 'נעדכן אתכם כשנשיק.',
     joinWhatsApp: 'הצטרפו לקבוצת הוואטסאפ שלנו',
+    orDivider: 'או',
+    whatsappGroupDesc: 'קישור להשקה, עדכונים שוטפים, הדרכות על פיצ׳רים, טיפים למחפשי עבודה והדרכות של מגייסות',
     
     // Footer
     copyright: '© 2026 PLUG. כל הזכויות שמורות.',
