@@ -59,6 +59,8 @@ export const translations = {
     desiredRole: 'Desired Role',
     desiredRolePlaceholder: 'e.g. Product Manager, Developer',
     submit: 'Join the Waitlist',
+    submitAndJoin: 'Join Waitlist & Community',
+    submitButtonDesc: "You'll be added to the waitlist and our WhatsApp group",
     submitting: 'Submitting...',
     
     // Validation errors
@@ -142,6 +144,8 @@ export const translations = {
     desiredRole: 'תפקיד מבוקש',
     desiredRolePlaceholder: 'לדוגמה: מנהל מוצר, מפתח',
     submit: 'הצטרפו לרשימת ההמתנה',
+    submitAndJoin: 'הצטרפו לרשימה ולקהילה',
+    submitButtonDesc: 'תצורפו לרשימת ההמתנה ולקבוצת הוואטסאפ שלנו',
     submitting: 'שולח...',
     
     // Validation errors
