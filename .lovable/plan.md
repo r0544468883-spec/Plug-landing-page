@@ -1,103 +1,91 @@
 
-# עדכון סקשן הפתרון + תיקון לשון זכר לפלאג
+
+# הוספת כפתור הצטרפות לקבוצת וואטסאפ
 
 ## סיכום
-שני שינויים עיקריים:
-1. **הוספת סרטון רקע** - הוספת קובץ ה-MP4 כרקע מאחורי סקשן "הפתרון" (FeatureGrid)
-2. **תיקון לשון זכר** - שינוי כל הטקסטים בעברית כך שפלאג ידבר על עצמו בגוף שלישי זכר
+הוספת כפתור וואטסאפ מתחת לכפתור "Join the Waitlist" בטופס ההרשמה, עם הסבר קצר על מה מקבלים בקבוצה.
 
 ---
 
-## 1. סרטון רקע בסקשן הפתרון
+## עיצוב הכפתור
 
-### מיקום הסרטון:
-- **דסקטופ**: צד שמאל של המסך, מאחורי הכרטיסיות
-- **מובייל**: מאחורי הטקסט, עם שכבת כיסוי כהה לקריאות
-
-### יישום טכני:
 ```text
-+------------------------------------------+
-|  [VIDEO BG]  |    Feature Cards Grid     |  <- Desktop
-+------------------------------------------+
+┌──────────────────────────────────────┐
+│        Join the Waitlist             │  <- כפתור ראשי (קיים)
+└──────────────────────────────────────┘
+                  
+           ─── או ───
 
-+------------------+
-|   Feature Cards  |  <- Mobile
-|   [VIDEO BG]     |
-+------------------+
+┌──────────────────────────────────────┐
+│  📱 הצטרפו לקבוצת הוואטסאפ שלנו      │  <- כפתור חדש
+└──────────────────────────────────────┘
+   קישור להשקה, עדכונים שוטפים,
+   הדרכות ופיצ'רים, טיפים למחפשי עבודה
 ```
 
-### קובץ:
-- העתקת `גיף_פיצ_רים_פלאג.mp4` לתיקיית `public/videos/plug-features.mp4`
-- שימוש ב-`<video>` tag עם `autoPlay`, `loop`, `muted`, `playsInline`
-- הוספת שכבת overlay כהה (50-70% opacity) לשמירה על קריאות הטקסט
+---
 
-### שינויים ב-FeatureGrid.tsx:
-- עטיפת הסקשן ב-container עם `position: relative`
-- הוספת video element עם `position: absolute`, `z-index: 0`
-- הוספת gradient overlay מעל הסרטון
-- Content ב-`z-index: 10` מעל הסרטון
+## שינויים
+
+### 1. קובץ: src/i18n/translations.ts
+
+הוספת תרגומים חדשים:
+
+| מפתח | אנגלית | עברית |
+|------|--------|-------|
+| `whatsappGroupDesc` | "Get launch updates, feature guides, job seeking tips & recruiter insights" | "קישור להשקה, עדכונים שוטפים, הדרכות על פיצ'רים, טיפים למחפשי עבודה והדרכות של מגייסות" |
+| `orDivider` | "or" | "או" |
+
+### 2. קובץ: src/components/plug/SignupForm.tsx
+
+הוספה אחרי כפתור ה-Submit (שורה 226):
+
+- קו מפריד עם "או" באמצע
+- כפתור וואטסאפ עם אייקון
+- טקסט הסבר קטן מתחת
+
+**עיצוב הכפתור:**
+- צבע ירוק וואטסאפ (`#25D366`)
+- אייקון וואטסאפ (SVG)
+- פתיחה בטאב חדש (`target="_blank"`)
+- קישור: `https://chat.whatsapp.com/Kbh0vYaFUTWG1Km3t0ogBw`
 
 ---
 
-## 2. תיקון לשון זכר - פלאג בגוף שלישי
+## קוד לדוגמה
 
-### עקרון:
-פלאג הוא **זכר** ומדבר על עצמו **בגוף שלישי**:
-- לא: "אני עוזר לך" 
-- כן: "פלאג עוזר לך"
+```tsx
+{/* Divider */}
+<div className="flex items-center gap-3 my-4">
+  <div className="flex-1 h-px bg-border" />
+  <span className="text-muted-foreground text-sm">{t('orDivider')}</span>
+  <div className="flex-1 h-px bg-border" />
+</div>
 
-### שינויים ב-translations.ts (עברית):
+{/* WhatsApp Button */}
+<a
+  href="https://chat.whatsapp.com/Kbh0vYaFUTWG1Km3t0ogBw"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center justify-center gap-2 w-full py-3 rounded-md 
+             bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold 
+             transition-colors"
+>
+  <WhatsAppIcon />
+  {t('joinWhatsApp')}
+</a>
 
-| מפתח | לפני | אחרי |
-|------|------|------|
-| `featuresSubtitle` | "פלאג גב לגב איתך..." | "פלאג איתך גב לגב עם כלים מבוססי AI שתוכננו למחפשי עבודה." |
-| `painBlackHoleDesc` | "שואבת אוטומטית..." | "פלאג שואב אוטומטית פרטים מכל לינק (LinkedIn, אתר חברה) ומנהל לך CRM אישי." |
-| `painResumeDesc` | "סורקת את דרישות..." | "פלאג סורק את דרישות התפקיד וממליץ על שינויים בזמן אמת כדי לנצח את ה-ATS." |
-| `painFollowUpDesc` | "תזכורות למיילים..." | "פלאג מזכיר לך לשלוח מיילים, מתזמן ראיונות ומנהל קבצים (מטלות בית ותיק עבודות) במקום אחד." |
-| `featureInterviewDesc` | "סימולטור הכנה..." | "פלאג מכין אותך לראיונות עבודה עם סימולטור AI מותאם לתפקיד הספציפי." |
-| `featureCandidateIdDesc` | "כרטיס אישי חכם..." | "פלאג יוצר לך כרטיס אישי חכם שניתן לשתף עם מגייסים." |
-| `featureDirectContactDesc` | "יצירת קשר ישיר..." | "פלאג מאפשר לך ליצור קשר ישיר עם המגייס בתוך המערכת." |
-| `featureAnalyticsDesc` | "ניתוח מעקב..." | "פלאג מנתח את חיפוש העבודה שלך - תדע איפה אתה עומד בכל רגע." |
-| `fabButton` | "שמרי לי מקום!" | "שמור לי מקום!" |
+<p className="text-xs text-muted-foreground text-center mt-2">
+  {t('whatsappGroupDesc')}
+</p>
+```
 
 ---
 
-## 3. קבצים לעדכון
+## קבצים לעדכון
 
 | קובץ | פעולה |
 |------|-------|
-| `public/videos/plug-features.mp4` | העתקת קובץ הסרטון |
-| `src/components/plug/FeatureGrid.tsx` | הוספת video background עם overlay |
-| `src/i18n/translations.ts` | תיקון כל הטקסטים ללשון זכר + גוף שלישי |
+| `src/i18n/translations.ts` | הוספת `whatsappGroupDesc` ו-`orDivider` |
+| `src/components/plug/SignupForm.tsx` | הוספת כפתור וואטסאפ אחרי Submit |
 
----
-
-## 4. דוגמת קוד - FeatureGrid.tsx
-
-```text
-<section className="relative py-12 px-6 overflow-hidden">
-  {/* Video Background */}
-  <video
-    autoPlay
-    loop
-    muted
-    playsInline
-    className="absolute left-0 top-0 h-full w-1/2 lg:w-1/3 
-               object-cover opacity-30 z-0
-               hidden sm:block"
-    src="/videos/plug-features.mp4"
-  />
-  
-  {/* Mobile: video behind all content */}
-  <video className="absolute inset-0 sm:hidden ..." />
-  
-  {/* Dark overlay for readability */}
-  <div className="absolute inset-0 bg-gradient-to-r 
-                  from-background/80 to-background z-[1]" />
-  
-  {/* Content - above video */}
-  <div className="relative z-10">
-    {/* Title, subtitle, grid... */}
-  </div>
-</section>
-```
