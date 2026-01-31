@@ -8,8 +8,7 @@ interface ThankYouProps {
   className?: string;
 }
 
-// Placeholder WhatsApp group link - replace with actual link
-const WHATSAPP_GROUP_LINK = 'https://chat.whatsapp.com/your-group-link';
+const WHATSAPP_GROUP_LINK = 'https://chat.whatsapp.com/Kbh0vYaFUTWG1Km3t0ogBw';
 
 const ThankYou: React.FC<ThankYouProps> = ({ name, className }) => {
   const { t, isRTL } = useLanguage();
